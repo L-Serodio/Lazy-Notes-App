@@ -2,22 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-using System.Globalization;
+
 
 public class Note {
     
-    private String text;
-    private String date;
-    public Note(String text) { 
-        this.text = text;
-        this.date = dateNow();
-    }
-
-    private String dateNow() {
-        var culture = new CultureInfo("pt-BR");
-        DateTime dateTime = DateTime.Now;
-        return dateTime.ToString(culture);
-    }
-
+    public string title { get; set; }
+    public string text { get; set; }
+    public string date { get; set; }
+    //public int id_note { get; set; }
 
 }
